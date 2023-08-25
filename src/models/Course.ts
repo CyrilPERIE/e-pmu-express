@@ -1,6 +1,6 @@
 import * as Sequelize from 'sequelize'
 import { sequelize } from '../instances/sequelize'
-import { Course as sCourse } from '../../../common/models/course'
+import { Course as sCourse } from '../common/models/course'
 
 export type sModelCourse = Sequelize.Model<sCourse & {
     id: number

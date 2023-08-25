@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Participant } from "../../../../common/models/participant";
+import { Participant } from "../../common/models/participant";
 import { CourseRepository } from "../../repositories/Course";
 
 export async function getPredictions(id_course: string, data: any) {

@@ -1,6 +1,6 @@
 import * as Sequelize from 'sequelize'
 import { sequelize } from '../instances/sequelize'
-import { Programme as sProgramme } from '../../../common/models/programme'
+import { Programme as sProgramme } from '../common/models/programme'
 
 export type sModelProgramme = Sequelize.Model<sProgramme> & {
     datePMU: string

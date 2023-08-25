@@ -1,6 +1,6 @@
 import * as Sequelize from 'sequelize'
 import { sequelize } from '../instances/sequelize'
-import { User as sUser } from '../../../common/models/user'
+import { User as sUser } from '../common/models/user'
 
 export type sModelUser = Sequelize.Model<sUser & {
     id: number

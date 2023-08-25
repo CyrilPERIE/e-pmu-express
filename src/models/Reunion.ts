@@ -1,6 +1,6 @@
 import * as Sequelize from 'sequelize'
 import { sequelize } from '../instances/sequelize'
-import { Reunion as sReunion } from '../../../common/models/reunion'
+import { Reunion as sReunion } from '../common/models/reunion'
 
 type sModelReunion = Sequelize.Model<sReunion & {
     id: number

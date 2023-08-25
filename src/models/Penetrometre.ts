@@ -1,6 +1,6 @@
 import * as Sequelize from 'sequelize'
 import { sequelize } from '../instances/sequelize'
-import { Penetrometre as sPenetrometre } from '../../../common/models/penetrometre'
+import { Penetrometre as sPenetrometre } from '../common/models/penetrometre'
 
 export type sModelPenetrometre = Sequelize.Model<sPenetrometre & {
     id: number
