@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { sModelPari } from "../models/Pari";
-import { PariService } from "../services/Pari";
-import { dateParams } from "../utils/models";
+import { sModelPari } from "../models/Pari.js";
+import { PariService } from "../services/Pari.js";
+import { dateParams } from "../utils/models.js";
 
 export class PariController {
 

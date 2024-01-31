@@ -1,4 +1,4 @@
-import { Course, sModelCourse } from "../models/Course";
+import { Course, sModelCourse } from "../models/Course.js";
 
 export class CourseRepository {
 

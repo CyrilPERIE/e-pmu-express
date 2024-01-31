@@ -1,11 +1,11 @@
-import { Course } from "../models/Course";
-import { Hippodrome } from "../models/Hippodrome";
-import { Meteo } from "../models/Meteo";
-import { Participant } from "../models/Participant";
-import { Penetrometre } from "../models/Penetrometre";
-import { Programme, sModelProgramme } from "../models/Programme";
-import { Reunion } from "../models/Reunion";
-import { dateParams, offsetLimit } from "../utils/models";
+import { Course } from "../models/Course.js";
+import { Hippodrome } from "../models/Hippodrome.js";
+import { Meteo } from "../models/Meteo.js";
+import { Participant } from "../models/Participant.js";
+import { Penetrometre } from "../models/Penetrometre.js";
+import { Programme, sModelProgramme } from "../models/Programme.js";
+import { Reunion } from "../models/Reunion.js";
+import { dateParams, offsetLimit } from "../utils/models.js";
 
 export class ProgrammeRepository {
 

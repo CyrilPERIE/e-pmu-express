@@ -1,13 +1,13 @@
-import { Course } from "./Course";
-import { Hippodrome } from "./Hippodrome";
-import { Meteo } from "./Meteo";
-import { Pari } from "./Pari";
-import { Participant } from "./Participant";
-import { Penetrometre } from "./Penetrometre"
-import { Programme } from "./Programme";
-import { Rapports } from "./Rapports";
-import { Reunion } from "./Reunion";
-import { User } from "./User";
+import { Course } from "./Course.js";
+import { Hippodrome } from "./Hippodrome.js";
+import { Meteo } from "./Meteo.js";
+import { Pari } from "./Pari.js";
+import { Participant } from "./Participant.js";
+import { Penetrometre } from "./Penetrometre.js"
+import { Programme } from "./Programme.js";
+import { Rapports } from "./Rapports.js";
+import { Reunion } from "./Reunion.js";
+import { User } from "./User.js";
 
 export async function defineRelationBetweenObjects() {
 

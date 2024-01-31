@@ -1,6 +1,6 @@
-import { sModelPari } from "../models/Pari";
-import { PariRepository } from "../repositories/Pari";
-import { dateParams } from "../utils/models";
+import { sModelPari } from "../models/Pari.js";
+import { PariRepository } from "../repositories/Pari.js";
+import { dateParams } from "../utils/models.js";
 
 export class PariService {
 

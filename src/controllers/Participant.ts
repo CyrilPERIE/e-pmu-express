@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { sModelParticipant } from "../models/Participant";
-import { ParticipantService } from "../services/Participant";
-import { dateParams } from "../utils/models";
+import { sModelParticipant } from "../models/Participant.js";
+import { ParticipantService } from "../services/Participant.js";
+import { dateParams } from "../utils/models.js";
 
 export class ParticipantController {
 

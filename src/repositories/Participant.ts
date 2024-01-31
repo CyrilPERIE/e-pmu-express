@@ -1,7 +1,7 @@
-import { Participant, sModelParticipant } from "../models/Participant";import { getPredictions } from "../utils/domains/getPrediction";
-;
-import { dateParams } from "../utils/models";
-import { ProgrammeRepository } from "./Programme";
+import { Participant, sModelParticipant } from "../models/Participant.js";
+import { getPredictions } from "../utils/domains/getPrediction.js";
+import { dateParams } from "../utils/models.js";
+import { ProgrammeRepository } from "./Programme.js";
 
 export class ParticipantRepository {
     static async postParticipant(reqParams: dateParams, participant: sModelParticipant) {

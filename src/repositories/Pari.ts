@@ -1,7 +1,7 @@
-import { Pari, sModelPari } from "../models/Pari";
-import { Rapports } from "../models/Rapports";
-import { dateParams } from "../utils/models";
-import { ProgrammeRepository } from "./Programme";
+import { Pari, sModelPari } from "../models/Pari.js";
+import { Rapports } from "../models/Rapports.js";
+import { dateParams } from "../utils/models.js";
+import { ProgrammeRepository } from "./Programme.js";
 
 export class PariRepository {
     static async postPari(reqParams: dateParams, pari: sModelPari) {

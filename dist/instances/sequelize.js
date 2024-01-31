@@ -1,4 +1,4 @@
-import { dbConfig } from "../config/dbConfig";
+import { dbConfig } from "../config/dbConfig.js";
 import { Sequelize } from "sequelize";
 export const sequelize = new Sequelize(process.env.DB, process.env.DBUSER, process.env.PASSWORD, {
     host: process.env.HOST,

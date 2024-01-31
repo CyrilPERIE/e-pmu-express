@@ -1,6 +1,6 @@
-import { sModelProgramme } from "../models/Programme";
-import { ProgrammeRepository } from "../repositories/Programme";
-import { dateParams, offsetLimit } from "../utils/models";
+import { sModelProgramme } from "../models/Programme.js";
+import { ProgrammeRepository } from "../repositories/Programme.js";
+import { dateParams, offsetLimit } from "../utils/models.js";
 
 export class ProgrammeService {
 

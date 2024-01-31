@@ -1,11 +1,11 @@
 import "dotenv/config";
 import cors from 'cors';
 import express from "express";
-import { defineRelationBetweenObjects } from "./models/_sync";
-import { ProgrammeController } from "./controllers/Programme";
-import { ParticipantController } from "./controllers/Participant";
-import { PariController } from "./controllers/Pari";
-import { UserController } from "./controllers/User";
+import { defineRelationBetweenObjects } from "./models/_sync.js";
+import { ProgrammeController } from "./controllers/Programme.js";
+import { ParticipantController } from "./controllers/Participant.js";
+import { PariController } from "./controllers/Pari.js";
+import { UserController } from "./controllers/User.js";
 const app = express();
 const PORT = process.env.PORT || 8081;
 //Limit volontairement grande pour pouvoir faire passer des fichiers de tailles plus grands que 1048576 (cf. https://stackoverflow.com/questions/19917401/error-request-entity-too-large)

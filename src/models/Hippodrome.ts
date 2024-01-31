@@ -1,6 +1,6 @@
 import * as Sequelize from 'sequelize'
-import { sequelize } from '../instances/sequelize'
-import { Hippodrome as sHippodrome } from '../common/models/hippodrome'
+import { sequelize } from '../instances/sequelize.js'
+import { Hippodrome as sHippodrome } from '../common/models/hippodrome.js'
 
 export type sModelHippodrome = Sequelize.Model<sHippodrome & {
     id: number

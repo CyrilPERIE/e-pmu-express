@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { sModelProgramme } from "../models/Programme";
-import { ProgrammeService } from "../services/Programme";
-import { dateParams, offsetLimit } from "../utils/models";
+import { sModelProgramme } from "../models/Programme.js";
+import { ProgrammeService } from "../services/Programme.js";
+import { dateParams, offsetLimit } from "../utils/models.js";
 
 export class ProgrammeController {
 

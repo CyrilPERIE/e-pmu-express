@@ -1,6 +1,6 @@
-import { sModelParticipant } from "../models/Participant";
-import { ParticipantRepository } from "../repositories/Participant";
-import { dateParams } from "../utils/models";
+import { sModelParticipant } from "../models/Participant.js";
+import { ParticipantRepository } from "../repositories/Participant.js";
+import { dateParams } from "../utils/models.js";
 
 export class ParticipantService {
 

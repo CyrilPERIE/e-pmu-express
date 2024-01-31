@@ -1,4 +1,4 @@
-import { dbConfig } from "../config/dbConfig";
+import { dbConfig } from "../config/dbConfig.js";
 import { Sequelize } from "sequelize";
 
 export const sequelize = new Sequelize(

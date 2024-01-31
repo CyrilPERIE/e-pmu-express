@@ -1,6 +1,6 @@
 import * as Sequelize from 'sequelize'
-import { sequelize } from '../instances/sequelize'
-import { Meteo as sMeteo } from '../common/models/meteo'
+import { sequelize } from '../instances/sequelize.js'
+import { Meteo as sMeteo } from '../common/models/meteo.js'
 
 export type sModelMeteo = Sequelize.Model<sMeteo & {
     id: number
