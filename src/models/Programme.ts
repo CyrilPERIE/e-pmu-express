@@ -1,6 +1,6 @@
-import * as Sequelize from 'sequelize'
-import { sequelize } from '../instances/sequelize.js'
-import { Programme as sProgramme } from '../common/models/programme.js'
+import * as Sequelize from "sequelize";
+import { sequelize } from "../instances/sequelize.js";
+import { Programme as sProgramme } from "../common/models/programme.js";
 
 export type sModelProgramme = Sequelize.Model<sProgramme> & {
     datePMU: string

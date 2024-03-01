@@ -1,5 +1,5 @@
 import "dotenv/config";
-import cors from 'cors';
+import cors from "cors";
 import express from "express";
 import { defineRelationBetweenObjects } from "./models/_sync.js";
 import { ProgrammeController } from "./controllers/Programme.js";

@@ -1,6 +1,6 @@
-import * as Sequelize from 'sequelize'
-import { sequelize } from '../instances/sequelize.js'
-import { Rapports as sRapports } from '../common/models/pari.js'
+import * as Sequelize from "sequelize";
+import { sequelize } from "../instances/sequelize.js";
+import { Rapports as sRapports } from "../common/models/pari.js";
 
 export type sModelRapports = Sequelize.Model<sRapports & {
     id: number

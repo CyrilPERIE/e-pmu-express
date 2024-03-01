@@ -1,5 +1,5 @@
 import { User } from "../models/User.js";
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 
 
 export class UserRepository {

@@ -1,6 +1,6 @@
-import * as Sequelize from 'sequelize'
-import { sequelize } from '../instances/sequelize.js'
-import { Penetrometre as sPenetrometre } from '../common/models/penetrometre.js'
+import * as Sequelize from "sequelize";
+import { sequelize } from "../instances/sequelize.js";
+import { Penetrometre as sPenetrometre } from "../common/models/penetrometre.js";
 
 export type sModelPenetrometre = Sequelize.Model<sPenetrometre & {
     id: number

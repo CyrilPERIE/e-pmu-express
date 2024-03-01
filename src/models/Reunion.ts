@@ -1,6 +1,6 @@
-import * as Sequelize from 'sequelize'
-import { sequelize } from '../instances/sequelize.js'
-import { Reunion as sReunion } from '../common/models/reunion.js'
+import * as Sequelize from "sequelize";
+import { sequelize } from "../instances/sequelize.js";
+import { Reunion as sReunion } from "../common/models/reunion.js";
 
 type sModelReunion = Sequelize.Model<sReunion & {
     id: number
