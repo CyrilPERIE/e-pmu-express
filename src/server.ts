@@ -58,3 +58,8 @@ app.route("/datasets/:ep_utilite")
 
 app.route("/auth/login")
   .post(UserController.login)
+
+  app.get('/up', (req, res) => {
+    console.log("called!")
+    res.send('up!');
+  });
