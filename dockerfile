@@ -1,8 +1,19 @@
 FROM node:20-alpine3.17
 
-WORKDIR /e-pmu-back-express
+# Définit le répertoire de travail dans le conteneur
+WORKDIR /app
+
+# Copie le fichier package.json et package-lock.json dans le répertoire de travail
 COPY package.json .
+
+# Installe les dépendances
 run npm install
+
+# Copie le reste de l'application dans le répertoire de travail
 COPY . .
-run npm run build
-cmd npm run start
+
+# Expose le port que l'application utilise
+EXPOSE 3000
+
+# Commande pour lancer l'application
+cmd npm run bstart
