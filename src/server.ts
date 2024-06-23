@@ -7,7 +7,6 @@ import { ParticipantController } from "./controllers/Participant.js";
 import { PariController } from "./controllers/Pari.js";
 import { UserController } from "./controllers/User.js";
 import './scraper/scheduler.js';
-import { onStartUp } from "./utils/onStartup.js";
 import path from 'path';
 
 const app = express();
@@ -71,5 +70,3 @@ app.get('/', (req, res) => {
 app.get('/sendFile', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-
-// onStartUp()

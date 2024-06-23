@@ -10,7 +10,6 @@ import { dateParams, offsetLimit } from "../utils/models.js";
 export class ProgrammeRepository {
 
     static async post(programme: sModelProgramme) {
-        console.log(programme)
         return await Programme.create(programme, {
             include: [{ model: Reunion, include: [{ model: Hippodrome }, { model: Meteo }, { model: Course, include:[{model: Penetrometre}]}] }]
         }).catch((err) => console.log(err));

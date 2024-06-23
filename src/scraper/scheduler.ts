@@ -5,7 +5,7 @@ import { DatePMU } from './util/class/datePMU.js';
 
 //Chaque jour on veut récupérer les côtes définitives des courses de la veille
 // Planifier la tâche pour s'exécuter tous les jours à 1h du matin
-cron.schedule('0 1 * * *', async () => {
+cron.schedule('5 0 * * *', async () => {
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
     await scrapCotesDefinitives(new DatePMU(yesterday))
@@ -13,7 +13,7 @@ cron.schedule('0 1 * * *', async () => {
   
   // Chaque jour on veut récupérer le programme
   // Planifier la tâche pour s'exécuter tous les jours à deux heures du matin
-  cron.schedule('0 2 * * *', async () => {
+  cron.schedule('10 0 * * *', async () => {
     await scrapProgramme(new DatePMU(new Date()))
   });
   

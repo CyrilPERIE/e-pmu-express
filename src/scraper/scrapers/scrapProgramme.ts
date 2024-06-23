@@ -38,7 +38,6 @@ export async function scrapProgramme(datePMU: DatePMU = new DatePMU(new Date()))
 
     for(let reunion of programme.reunions) {
       for(let course of reunion.courses) {
-        console.log(`${ datePMU.datePMU } ${ reunion.numOfficiel } ${ course.numExterne }`)
         await scrapParticipants(datePMU, reunion, course)
       }
     }
