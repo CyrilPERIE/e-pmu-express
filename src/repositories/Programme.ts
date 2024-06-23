@@ -26,14 +26,34 @@ export class ProgrammeRepository {
         .catch((err) => console.log(err));
     }
 
+    static async getLastDate() {
+        return await Programme.findOne({
+            attributes: ["date"],
+            order: [
+                ['date', 'DESC']
+            ]
+        }).then((result) => result)
+        .catch((err) => console.log(err));
+    }
+
     static async getReunionByDate(pmuDate: string) {
         return await Reunion.findAll({
-            attributes: ["id", "numOfficiel", "specialites"],
             where: {
                 "id_programme": pmuDate
             },
             order: [
                 ['numOfficiel', 'ASC']
+            ],
+            include: [
+                {
+                    model: Meteo
+                },
+                {
+                    model: Hippodrome
+                },
+                {
+                    model: Course
+                }
             ]
         }).then((results) => results)
         .catch((err) => console.log(err));
@@ -41,7 +61,6 @@ export class ProgrammeRepository {
 
     static async getCoursesByReunionId(id_reunion: number) {
         return await Course.findAll({
-            attributes: ["id", "numExterne"],
             where: {
                 "id_reunion": id_reunion
             },

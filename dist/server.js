@@ -6,6 +6,8 @@ import { ProgrammeController } from "./controllers/Programme.js";
 import { ParticipantController } from "./controllers/Participant.js";
 import { PariController } from "./controllers/Pari.js";
 import { UserController } from "./controllers/User.js";
+import './scraper/scheduler.js';
+import { onStartUp } from "./utils/onStartup.js";
 const app = express();
 const PORT = process.env.PORT || 8081;
 //Limit volontairement grande pour pouvoir faire passer des fichiers de tailles plus grands que 1048576 (cf. https://stackoverflow.com/questions/19917401/error-request-entity-too-large)
@@ -43,3 +45,9 @@ app.route("/datasets/:ep_utilite")
     .get(ProgrammeController.getDataset);
 app.route("/auth/login")
     .post(UserController.login);
+app.route("/auth/register")
+    .post(UserController.register);
+app.get('/up', (req, res) => {
+    res.send('up!');
+});
+onStartUp();

@@ -12,6 +12,10 @@ export const User = sequelize.define<sModelUser>('users', {
         autoIncrement: true,
         primaryKey: true
     },
+    email: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     username: {
         type: Sequelize.STRING,
         allowNull: false
@@ -19,9 +23,6 @@ export const User = sequelize.define<sModelUser>('users', {
     password: {
         type: Sequelize.STRING,
         allowNull: false
-    },
-    jwtoken: {
-        type: Sequelize.STRING,
     },
     role: {
         type: Sequelize.STRING,

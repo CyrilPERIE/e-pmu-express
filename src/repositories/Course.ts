@@ -11,4 +11,5 @@ export class CourseRepository {
         .then((results: sModelCourse & {specialite}) => results.specialite)
         .catch((err) => console.log(err));        
     }
+    
 }

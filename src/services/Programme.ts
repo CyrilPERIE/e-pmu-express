@@ -12,6 +12,10 @@ export class ProgrammeService {
         return await ProgrammeRepository.getAllDates(); 
     }
 
+    static async getLastDate() {
+        return await ProgrammeRepository.getLastDate();
+    }
+
     static async getReunionByDate(pmuDate: string){
         return await ProgrammeRepository.getReunionByDate(<string>pmuDate); 
     }

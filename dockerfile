@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package.json .
 
 # Installe les dépendances
-run npm install
+RUN npm install
 
 # Copie le reste de l'application dans le répertoire de travail
 COPY . .
@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 3000
 
 # Commande pour lancer l'application
-cmd npm run bstart
+CMD npm run bstart
