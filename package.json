@@ -21,9 +21,10 @@
   },
   "scripts": {
     "setup-db": "mysql -u user -ppassword < ./src/scripts/init-db.sql",
-    "build": "tsc",
+    "build": "git submodule update --init --recursive && tsc",
     "start": "node --experimental-modules --es-module-specifier-resolution=node ./dist/server.js",
     "bstart": "npm run build && npm run start",
-    "jsdoc": "jsdoc -c jsdoc.json"
+    "jsdoc": "jsdoc -c jsdoc.json",
+    "vercel-install": "./vercel-submodule-workaround.sh && yarn --ignore-scripts --production=false"
   }
 }

@@ -8,6 +8,7 @@ import { PariController } from "./controllers/Pari.js";
 import { UserController } from "./controllers/User.js";
 import './scraper/scheduler.js';
 import { onStartUp } from "./utils/onStartup.js";
+import path from 'path';
 
 const app = express();
 const PORT = process.env.PORT || 8081;
@@ -15,6 +16,7 @@ const PORT = process.env.PORT || 8081;
 //Limit volontairement grande pour pouvoir faire passer des fichiers de tailles plus grands que 1048576 (cf. https://stackoverflow.com/questions/19917401/error-request-entity-too-large)
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 
@@ -63,8 +65,12 @@ app.route("/auth/login")
 app.route("/auth/register")
   .post(UserController.register)
 
-app.get('/up', (req, res) => {
+app.get('/', (req, res) => {
   res.send('up!');
+});
+
+app.get('/sendFile', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 onStartUp()
