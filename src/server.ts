@@ -16,7 +16,6 @@ const PORT = process.env.PORT || 8081;
 //Limit volontairement grande pour pouvoir faire passer des fichiers de tailles plus grands que 1048576 (cf. https://stackoverflow.com/questions/19917401/error-request-entity-too-large)
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 
@@ -73,4 +72,4 @@ app.get('/sendFile', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-onStartUp()
+// onStartUp()

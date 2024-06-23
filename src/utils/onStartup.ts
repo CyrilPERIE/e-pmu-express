@@ -17,11 +17,18 @@ function getDatesArray(startDate: number | Date | string): DatePMU[] {
     return datesArray;
 }
   
+function isToday (someDate: Date | number | string) {
+    const today = new Date()
+    const paramDate = new Date(someDate)
+    return paramDate.getDate() == today.getDate() &&
+    paramDate.getMonth() == today.getMonth() &&
+    paramDate.getFullYear() == today.getFullYear()
+  }
   
 export const retrieveMissingDatasSinceLastLaunch = async () => {
     const date = await ProgrammeService.getLastDate();
     if(!date) await recuperationComplete()
-    else {
+    else if(!isToday(date.dataValues.date)){
         await recuperationComplete(date.dataValues.date)
     }
 }
