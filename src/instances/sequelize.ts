@@ -9,7 +9,7 @@ export const sequelize = new Sequelize(
     host: process.env.HOST || "localhost",
     dialect: "mysql",
     port: dbConfig.port || 3306,
-  }
+  },
 );
 
 sequelize.authenticate()

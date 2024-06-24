@@ -1,3 +1,4 @@
+import { estimateEverything } from "../scripts/estimation.js";
 import { onStartUp } from "../utils/onStartup.js";
 import { Course } from "./Course.js";
 import { Hippodrome } from "./Hippodrome.js";
@@ -87,5 +88,5 @@ export async function defineRelationBetweenObjects() {
             await Participant.sync()
         await Meteo.sync()
 
-    onStartUp()
+    await onStartUp()
 }

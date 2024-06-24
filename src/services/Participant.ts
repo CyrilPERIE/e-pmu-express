@@ -1,5 +1,6 @@
 import { sModelParticipant } from "../models/Participant.js";
 import { ParticipantRepository } from "../repositories/Participant.js";
+import { getPredictions } from "../utils/domains/getPrediction.js";
 import { dateParams } from "../utils/models.js";
 
 export class ParticipantService {

@@ -1,5 +1,4 @@
 import { Participant, sModelParticipant } from "../models/Participant.js";
-import { getPredictions } from "../utils/domains/getPrediction.js";
 import { dateParams } from "../utils/models.js";
 import { ProgrammeRepository } from "./Programme.js";
 
@@ -21,7 +20,22 @@ export class ParticipantRepository {
             order: [
                 ['numPmu', 'ASC']
             ]
-        }).then(async (results) => await getPredictions(id_course, results))
+        }).then(async (results) => results)
         .catch((err) => console.log(err));        
+    }
+
+    static async updateParticipantOrdreArriveeEstimee(id_participant: string, ordreArriveeEstimee_participant: number) {
+        return await Participant.update(
+            { ordreArriveeEstimee: ordreArriveeEstimee_participant },
+            {
+              where: {
+                id: id_participant
+              }
+            }
+          ).then(() => {
+            // console.log('Mise à jour réussie');
+          }).catch((error) => {
+            console.error('Erreur lors de la mise à jour', error);
+          });
     }
 }

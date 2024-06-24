@@ -5,9 +5,15 @@ import { dateToPmuDate } from "../utils.js"
  */
 export class DatePMU {
     datePMU: String
+    date: Date
 
     constructor(date: Date) {
+        this.date = date
         this.datePMU = dateToPmuDate(date)
+    }
+
+    toDate(): Date {
+        return this.date
     }
 
     toString(): string {

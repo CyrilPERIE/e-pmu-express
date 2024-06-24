@@ -37,6 +37,7 @@ export const Participant = sequelize.define<sModelParticipant>('participants', {
     nomMere: Sequelize.TEXT,
     nomPereMere: Sequelize.TEXT,
     ordreArrivee: Sequelize.INTEGER,
+    ordreArriveeEstimee: Sequelize.DOUBLE,
     jumentPleine: Sequelize.BOOLEAN,
     engagement: Sequelize.BOOLEAN,
     supplement: Sequelize.INTEGER,

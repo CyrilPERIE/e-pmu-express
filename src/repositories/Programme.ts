@@ -51,7 +51,12 @@ export class ProgrammeRepository {
                     model: Hippodrome
                 },
                 {
-                    model: Course
+                    model: Course,
+                    include: [
+                        {
+                            model: Participant
+                        }
+                    ]
                 }
             ]
         }).then((results) => results)
@@ -65,6 +70,11 @@ export class ProgrammeRepository {
             },
             order: [
                 ['numExterne', 'ASC']
+            ],
+            include: [
+                {
+                    model: Participant
+                }
             ]
         }).then((results) => results)
         .catch((err) => console.log(err));

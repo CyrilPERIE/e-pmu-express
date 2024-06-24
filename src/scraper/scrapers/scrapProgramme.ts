@@ -5,6 +5,7 @@ import { oneOf } from '../util/utils.js';
 import { BASE_API_URL, BASE_PMU_URL } from '../constants.js';
 import { Programme } from '../../common/models/programme.js';
 import { Utilite } from '../../common/enums/ep_utilite.js';
+import { estimateEverything } from '../../scripts/estimation.js';
 
 
 /**
@@ -46,5 +47,6 @@ export async function scrapProgramme(datePMU: DatePMU = new DatePMU(new Date()))
   .catch(error => {
     console.error(error.stack)
   });
+  await estimateEverything(datePMU.toDate())
 }
 
