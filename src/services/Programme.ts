@@ -20,6 +20,10 @@ export class ProgrammeService {
         return await ProgrammeRepository.getReunionByDate(<string>pmuDate); 
     }
 
+    static async delete(pmuDate: string){
+        return await ProgrammeRepository.delete(<string>pmuDate); 
+    }
+
     static async getCoursesByReunionId(id_reunion: number){
         return await ProgrammeRepository.getCoursesByReunionId(<number>id_reunion); 
     }

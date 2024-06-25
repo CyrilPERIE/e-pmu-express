@@ -1,5 +1,6 @@
 import axios from "axios";
 import { CourseRepository } from "../../repositories/Course.js";
+import { sModelParticipant } from "../../models/Participant.js";
 
 export async function getPredictions(id_course: string, data: any) {
     const specialite = await CourseRepository.getSpecialite(id_course);

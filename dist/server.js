@@ -29,6 +29,8 @@ app.route("/programme")
     .post(ProgrammeController.post);
 app.route("/programme/dates")
     .get(ProgrammeController.getAllDates);
+app.route("/programme/:datePMU")
+    .delete(ProgrammeController.delete);
 app.route("/programme/:datePMU/reunions")
     .get(ProgrammeController.getReunionByDate);
 app.route("/programme/:reunion_id/courses")

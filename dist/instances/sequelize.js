@@ -4,6 +4,7 @@ export const sequelize = new Sequelize(process.env.DB || "expressapp", process.e
     host: process.env.HOST || "localhost",
     dialect: "mysql",
     port: dbConfig.port || 3306,
+    logging: false,
 });
 sequelize.authenticate()
     .then(() => {

@@ -26,6 +26,13 @@ export class ProgrammeController {
 
   }
 
+  static async delete(req: Request, res: Response) {
+    return await ProgrammeService.delete(<string>req.params.datePMU)
+    .then(obj => res.status(201).json(obj))
+    .catch(e => { console.error(e); res.status(500).send("Internal Error") });
+
+  }
+
   static async getCoursesByReunionId(req: Request, res: Response) {
     return await ProgrammeService.getCoursesByReunionId(Number(req.params.reunion_id))
     .then(obj => res.status(200).json(obj))

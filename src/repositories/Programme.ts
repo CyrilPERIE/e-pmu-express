@@ -63,6 +63,16 @@ export class ProgrammeRepository {
         .catch((err) => console.log(err));
     }
 
+    static async delete(pmuDate: string) {
+        return await Programme.destroy({
+            where: { "datePMU": pmuDate }
+        }).then(() => {
+            console.log('Programme and all associated entities deleted');
+        }).catch((err) => {
+            console.error('Error deleting programme:', err);
+        });
+    }
+
     static async getCoursesByReunionId(id_reunion: number) {
         return await Course.findAll({
             where: {
